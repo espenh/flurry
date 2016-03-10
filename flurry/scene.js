@@ -19,7 +19,7 @@ class FlurryScene {
     }
 
     addForce() {
-        let force = new RadialForce(this.getRandomPosition(), 0.5 * (Math.random() < 0.5 ? -1 : 1));
+        let force = new RadialForce(this.getRandomPosition(), 20, 0.5 * (Math.random() < 0.5 ? -1 : 1));
         this.forces.push(force);
         this.sceneChangedHandler(this);
 
