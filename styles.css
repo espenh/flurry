@@ -1,0 +1,37 @@
+body {
+    background-color: #eee;
+}
+
+.scene-container {
+    width: 600px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    background-image: url("http://orig02.deviantart.net/8082/f/2010/313/3/1/winter_night_jpg_by_fel_x-d32hxpf.jpg");
+}
+
+    .scene-container > canvas {
+        width: 100%;
+        height: 100%;
+    }
+
+.control-box {
+    float: left;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.object-properties {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}

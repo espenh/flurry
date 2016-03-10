@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Flurry</title>
+
+    <script type="text/javascript" src="flurry/vector.js"></script>
+    <script type="text/javascript" src="flurry/gameloop.js"></script>
+    
+    <script type="text/javascript" src="flurry/physics.js"></script>
+    <script type="text/javascript" src="flurry/items.js"></script>
+    <script type="text/javascript" src="flurry/emitters.js"></script>
+    <script type="text/javascript" src="flurry/scene.js"></script>    
+    <script type="text/javascript" src="flurry/renderer.js"></script>
+    <script type="text/javascript" src="flurry/mousehandler.js"></script>
+    <script type="text/javascript" src="flurry/flurry.js"></script>
+
+    <script type="text/javascript" src="controlbuilder.js"></script>
+    <script type="text/javascript" src="scenehasher.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="scene-container">
+        <canvas width="600" height="500" />
+    </div>
+
+    <div class="control-box">
+        <button onclick="flurryGlobal.start()">Start</button>
+        <button onclick="flurryGlobal.stop()">Stop</button>
+        <button onclick="flurryGlobal.addForce()">Add force</button>
+        <button onclick="flurryGlobal.addEmitter()">Add emitter</button>
+        <button onclick="flurryGlobal.clear()">Clear</button>
+    </div>
+
+    <div class="control-box object-properties">
+        No controls
+    </div>
+
+    <template id="simple-input">
+        <div class="input-box">
+            <label class="label"></label>
+            <input class="value" type="text"></input>
+        </div>
+    </template>
+
+    <template id="range-input">
+        <div class="input-box">
+            <span><span class="label"></span> <span class="valueLabel"></span></span>
+            <input class="value" type="range"></input>
+        </div>
+    </template>
+    
+    <template id="delete-object">
+        <button class="delete-button">Delete</button>
+    </template>
+</body>
+
+</html>
