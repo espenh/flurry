@@ -39,8 +39,8 @@ class Rectangle extends PhysicsObject {
 }
 
 class RadialForce extends Sphere {
-    constructor(position, strength = 1, range = 200) {
-        super(position, 30);
+    constructor(position, radius = 30, strength = 1, range = 200) {
+        super(position, radius);
 
         this.range = range;
         this.strength = strength;
