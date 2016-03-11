@@ -12,7 +12,7 @@ class FlurryScene {
         this.emitters = [];
         this.emitters.push(new SnowEmitter(new Vector(50, 50), 50, this.createSnowFlake.bind(this)));
         this.emitters.push(new SnowEmitter(new Vector(200, 200), 100, this.createSnowFlake.bind(this), 100));
-        this.emitters[1].snowColor = "#ffffff";
+        this.emitters[1].snowColor = "#bbf0ff";
 
         this.forces = [];        
         this.forces.push(new RadialForce(new Vector(50, 250), 15, -0.3));

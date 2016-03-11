@@ -7,7 +7,7 @@ class SnowEmitter extends Rectangle {
         this.flakeCreator = flakeCreator;
         this.flakesPerSecond = flakesPerSecond;
         this.lastCreatedTime = performance.now();
-        this.snowColor = "#fff";
+        this.snowColor = "#ffffff";
     }
 
     update(timeDelta, timestamp) {
