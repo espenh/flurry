@@ -7,7 +7,7 @@ class SceneHasher {
     constructor(blacklist = []) {
         this.blacklist = blacklist;
 
-        this.objectDelimiter = "|";
+        this.objectDelimiter = "+";
         this.propertyDelimiter = "!";
 
         this.objectTypeNameMap = {
