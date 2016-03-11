@@ -74,7 +74,7 @@ class SceneHasher {
             return empty;
         }
 
-        if (objectType === "number") {
+        if (objectType === "number" || objectType === "string") {
             return property + ":" + value;
         }
 
