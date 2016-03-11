@@ -7,6 +7,7 @@ class SnowEmitter extends Rectangle {
         this.flakeCreator = flakeCreator;
         this.flakesPerSecond = flakesPerSecond;
         this.lastCreatedTime = performance.now();
+        this.snowColor = "rgba(255,255,255,0.6)";
     }
 
     update(timeDelta, timestamp) {
@@ -19,6 +20,7 @@ class SnowEmitter extends Rectangle {
 
             for (let i = 0; i < flakesToCreate; i++) {
                 let flake = this.flakeCreator();
+                flake.color = this.snowColor;
                 flake.position = new Vector(this.position.x + Math.random() * this.width, this.position.y + this.height);
                 flake.velocity = new Vector(0, 10 + Math.random() * 50);
             }
