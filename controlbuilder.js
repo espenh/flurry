@@ -45,12 +45,15 @@ class ControlBuilder {
         });
     }
 
-    createSimpleInput(scene, object, property) {
+    createSimpleInput(scene, object, property, inputType) {
         let newInputElement = document.getElementById('simple-input').content.cloneNode(true);
         newInputElement.querySelector(".label").innerText = property;
 
         let inputBox = newInputElement.querySelector(".value");
         inputBox.value = object[property];
+        if(inputType){
+            inputBox.type = inputType;
+        }
         inputBox.onchange = () => {
             let value = inputBox.value;
             if (typeof object[property] === "number") {
@@ -93,6 +96,8 @@ class ControlBuilder {
     createInputFromMetadata(scene, object, property, metainfo) {
         if(metainfo.type === "range") {
             return this.createRangeInput(scene, object, property, metainfo.min, metainfo.max, metainfo.step)
+        } else if(metainfo.type === "color") {
+            return this.createSimpleInput(scene, object, property, "color");
         } else{
             console.error("Unknown metainfo type: " + metainfo.type);
         }

@@ -16,7 +16,7 @@ class FlurryRenderer {
         // Flakes
         this.context.save();
         scene.flakes.forEach(flake => {
-            this.context.fillStyle = flake.color || "rgba(255,255,255,0.6)";
+            this.context.fillStyle = flake.color || "#fff";
             this.context.beginPath();
             this.context.arc(flake.position.x, flake.position.y, flake.radius, 0, Math.PI * 2, true);
             this.context.fill();
